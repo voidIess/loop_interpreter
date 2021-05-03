@@ -1,0 +1,9 @@
+a:=x-y
+b=y-x
+LOOP a DO
+  z:=x
+END
+LOOP b DO
+  z:=y
+END
+LOOP c DO

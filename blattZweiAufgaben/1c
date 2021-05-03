@@ -1,0 +1,19 @@
+Kleinere Zahl finden und auf d setzen
+a:=x-y
+b:=y-x
+LOOP b DO
+  d:=x
+END
+LOOP a DO
+  d:=y
+END
+
+
+c:=0
+z:=0
+LOOP d DO
+  a:=x
+  b:=y
+
+  c:=c+1
+END
