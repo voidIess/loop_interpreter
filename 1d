@@ -1,9 +1,27 @@
+ggtConfirmed:=0
 a:=x-y
 b=y-x
 LOOP a DO
-  z:=x
+  kleiner:=y
+  groesser:=x
 END
 LOOP b DO
-  z:=y
+  kleiner:=x
+  groesser:=y
 END
-LOOP c DO
+LOOP kleiner DO
+  a:=groesser
+  b:=kleiner
+  LOOP kleiner DO
+    groesserZwei:=groesser
+    kleinerZwei:=kleiner
+    Wir überprüfen das c nicht null ist
+    LOOP c DO
+      u:=1
+    END
+
+    LOOP u DO
+
+    END
+END
+z:=ggtConfirmed
