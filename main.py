@@ -64,6 +64,11 @@ if __name__ == '__main__':
         lines = file_dc.read().split("\n")
         file_dc.close()
 
+    # remove tabs and spaces before the lines and empty lines
+    lines = filter((lambda x: x != '') ,lines)
+    lines = list(map((lambda x: re.sub("^[ ,\t]*(.*)$", "\\1", x)), lines))
+    print(lines)
+
     # initialise all variables
     state = {}
     for i in range(2, len(sys.argv)):
