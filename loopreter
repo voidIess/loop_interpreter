@@ -1,4 +1,3 @@
 #!/bin/sh
 COMMAND="python3 ./main.py $@"
-echo $COMMAND
 nix-shell -p pkgs.python3 --pure --run "$COMMAND" || $COMMAND

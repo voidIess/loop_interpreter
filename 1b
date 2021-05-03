@@ -1,3 +1,0 @@
-LOOP y DO
-  z=z+x
-END
