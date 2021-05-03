@@ -1,1 +1,9 @@
-z:=x-y
+reducedX:=x+0
+LOOP y DO
+	reducedX:=reducedX-1
+END
+z:=y+0
+# case that x is truely greater
+LOOP reducedX DO
+	z:=x+0
+END

@@ -64,7 +64,7 @@ if __name__ == '__main__':
         lines = file_dc.read().split("\n")
         file_dc.close()
 
-    # remove tabs and spaces before the lines and empty lines
+    # remove empty lines, tabs, spaces and comments
     lines = map((lambda x: re.sub("^[ ,\t]*(.*)$", "\\1", x)), lines)
     lines = list(filter((lambda x: x != '' and not re.match("^#.*$",x)) ,lines))
 
