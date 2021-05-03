@@ -69,8 +69,6 @@ if __name__ == '__main__':
     for i in range(2, len(sys.argv)):
         parse_variable(sys.argv[i])
 
-    print(state)
-
     program_length = len(lines)
     next_instruction = 0
     while (next_instruction < program_length):
