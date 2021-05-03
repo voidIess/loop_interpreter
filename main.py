@@ -67,7 +67,6 @@ if __name__ == '__main__':
     # remove tabs and spaces before the lines and empty lines
     lines = filter((lambda x: x != '') ,lines)
     lines = list(map((lambda x: re.sub("^[ ,\t]*(.*)$", "\\1", x)), lines))
-    print(lines)
 
     # initialise all variables
     state = {}
@@ -76,7 +75,7 @@ if __name__ == '__main__':
 
     program_length = len(lines)
     next_instruction = 0
-    while (next_instruction < program_length):
+    while next_instruction < program_length:
         next_instruction = call(next_instruction)
 
     print("Result: {}".format(read_variable("z")))
