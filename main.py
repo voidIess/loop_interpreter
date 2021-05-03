@@ -39,8 +39,13 @@ def call(pc) -> int:
         repetitions = read_variable(re.sub("LOOP (\w+) DO", "\\1", current_line))
 
         inner_limit = pc
-        while (lines[inner_limit] != "END"):
+        ends_left = 1
+        while ends_left > 0:
             inner_limit += 1
+            if (lines[inner_limit] == "END"):
+                ends_left-=1
+            elif (re.match("LOOP \w+ DO" ,lines[inner_limit])):
+                ends_left+=1
 
         # execute the inner commands 'repetitions' times
         for i in range(repetitions):
