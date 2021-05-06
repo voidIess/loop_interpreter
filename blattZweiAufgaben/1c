@@ -1,19 +1,9 @@
-Kleinere Zahl finden und auf d setzen
-a:=x-y
-b:=y-x
-LOOP b DO
-  d:=x
+reducedX:=x+0
+LOOP y DO
+	reducedX:=reducedX-1
 END
-LOOP a DO
-  d:=y
-END
-
-
-c:=0
-z:=0
-LOOP d DO
-  a:=x
-  b:=y
-
-  c:=c+1
+z:=y+0
+# case that x is truely greater
+LOOP reducedX DO
+	z:=x+0
 END
